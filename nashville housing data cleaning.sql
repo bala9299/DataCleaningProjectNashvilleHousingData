@@ -138,11 +138,11 @@ from nashvilledb..NashvilleHousingData;
 
 With RownumCte as (
 select * ,ROW_NUMBER() over( partition by  ParcelID, 
-											PropertyAddress,	
-											SalePrice, 
-											SaleDate, 
-											LegalReference 
-											order by UniqueID) row_num
+					PropertyAddress,	
+					SalePrice, 
+					SaleDate, 
+					LegalReference 
+					order by UniqueID) row_num
 from nashvilledb..NashvilleHousingData
 
 
